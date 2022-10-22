@@ -1,0 +1,39 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins.scss";
+
+.form {
+	&__section {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		margin: 10px 0px;
+		&__input {
+			@include input();
+		}
+	}
+	&__footer {
+		padding: 10px 0px;
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 10px;
+		&__btn {
+			@include button(submit);
+		}
+		&__btn--negative {
+			@include button(danger);
+		}
+	}
+}
+
+.btn {
+	&__primary,
+	&__secondary {
+		@include button(secondary);
+	}
+}
+
+.modal {
+	&__content {
+		font-size: 13px;
+	}
+}
