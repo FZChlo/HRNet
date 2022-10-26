@@ -1,6 +1,6 @@
 import "./formemployee.scss";
 import { Link } from "react-router-dom";
-import { Modal } from "reactlightmodal-by-damevin";
+import { Modal } from "reactlightmodalfz";
 import { useRef, useState } from "react";
 import React from "react";
 import statesData from "../../data/states.js";
