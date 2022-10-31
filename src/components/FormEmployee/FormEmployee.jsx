@@ -47,11 +47,12 @@ export default function FormEmployee() {
 		<>
 			<form onSubmit={handleEmployeeForm} className="form">
 				<div className="form__section">
-					<label className="form__section__label">First Name</label>
+					<label className="form__section__label" >First Name</label>
 					<input
 						className="form__section__input"
 						required
 						type="text"
+						id="firstname"
 						ref={employeeForm.firstname}
 					></input>
 				</div>
@@ -61,6 +62,7 @@ export default function FormEmployee() {
 						className="form__section__input"
 						required
 						type="text"
+						id="lastname"
 						ref={employeeForm.lastname}
 					></input>
 				</div>
@@ -70,6 +72,7 @@ export default function FormEmployee() {
 						className="form__section__input"
 						required
 						type="date"
+						id="birthdaydate"
 						ref={employeeForm.dateOfBirth}
 					></input>
 				</div>
@@ -79,20 +82,21 @@ export default function FormEmployee() {
 						className="form__section__input"
 						required
 						type="date"
+						id="startdate"
 						ref={employeeForm.startDate}
 					></input>
 				</div>
 				<div className="form__section">
 					<label className="form__section__label">Street</label>
-					<input className="form__section__input" required type="text" ref={employeeForm.street}></input>
+					<input className="form__section__input" required type="text" id="street" ref={employeeForm.street}></input>
 				</div>
 				<div className="form__section">
 					<label className="form__section__label">City</label>
-					<input className="form__section__input" required type="text" ref={employeeForm.city}></input>
+					<input className="form__section__input" required type="text" id="city" ref={employeeForm.city}></input>
 				</div>
 				<div className="form__section">
 					<label className="form__section__label">State</label>
-					<select name="state" className="form__section__input" required ref={employeeForm.state}>
+					<select name="state" className="form__section__input" required id="state" ref={employeeForm.state}>
 						{statesData.map((state, index) => {
 							return (
 								<option key={index} value={state.abbreviation}>
@@ -108,6 +112,7 @@ export default function FormEmployee() {
 						className="form__section__input"
 						required
 						type="number"
+						id="zipcode"
 						ref={employeeForm.zipcode}
 					></input>
 				</div>
@@ -117,6 +122,7 @@ export default function FormEmployee() {
 						name="department"
 						className="form__section__input"
 						required
+						id="department"
 						ref={employeeForm.department}
 					>
 						<option value="Sales">Sales</option>
